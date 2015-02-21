@@ -1,0 +1,11 @@
+<h1><%= @beer.name %></h1>
+</br>
+</br>
+
+<%= @beer.description %>
+</br>
+<%= @beer.ibu %>
+</br>
+<%= @beer.abv %>
+</br>
+<%= link_to "Edit", edit_beer_path(@beer)%> | <%= link_to "Back", beers_path %> | <%= link_to "Delete", beer_path(@beer), method: :delete, data: {confirm: "Are you sure?"} %>

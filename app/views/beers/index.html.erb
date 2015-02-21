@@ -1,0 +1,17 @@
+<h1> ALL THE BEERZ </h1>
+<% @beers.each do |b| %>
+
+<%= b.name %>
+</br>
+<%= b.description %>
+</br>
+<%= b.ibu %>
+</br>
+<%= b.abv %>
+</br>
+<%= link_to "Edit", edit_beer_path(b) %>
+<%= link_to "Delete", beer_path(b), method: :delete, data: {confirm: "Are You Sure?"} %>
+</br>
+<% end %>
+
+<%= link_to "New Beer", new_beer_path %>

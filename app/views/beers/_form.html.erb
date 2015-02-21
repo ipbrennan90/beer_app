@@ -1,0 +1,21 @@
+<%= form_for @beer do |f| %>
+<% if @beer.errors.any? %>
+<h2> Errors </h2>
+
+  <ul>
+    <% @beer.errors.full_messages.each do |message| %>
+    <li> <%= message %>
+    <% end %>
+  </ul>
+  <% end %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :description %>
+<%= f.text_area :description %>
+<%= f.label :ibu %>
+<%= f.number_field :ibu %>
+<%= f.label :abv %>
+<%= f.number_field :abv %>
+<%= f.submit %>
+<%= link_to "Cancel", beers_path %>
+<% end %>
